@@ -7,4 +7,6 @@ import { Component, HostBinding } from '@angular/core';
 })
 export class FooterComponent {
 	@HostBinding('class') hostClass = 'footer';
+
+		ano: number = new Date().getFullYear();
 }

@@ -318,9 +318,9 @@ export default plugin(({addComponents, theme}) => {
     if (color === 'light') {
       addComponents({
         '.btn-light': {
-          'color': 'var(--tw-gray-700)',
+          'color': 'var(--tw-gray-900)',
           'border-color':  'var(--tw-gray-300)',
-          'background-color': 'var(--tw-light)',      
+          'background-color': 'bg-[#fefefe] dark:bg-[#09090B]',      
           'i': {
             'color': 'var(--tw-gray-500)',
           },
@@ -328,7 +328,7 @@ export default plugin(({addComponents, theme}) => {
             'border-color':  'var(--tw-gray-300)',
             'background-color': 'var(--tw-light-active)',
             'box-shadow': 'var(--tw-default-box-shadow)',
-            'color': 'var(--tw-gray-800)',
+            'color': 'var(--tw-gray-900)',
             'i': {
               'color': 'var(--tw-gray-600)',
             },

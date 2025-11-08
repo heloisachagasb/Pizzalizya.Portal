@@ -13,29 +13,29 @@ export default plugin(({addComponents, theme}) => {
 			'font-weight': theme('custom.components.btn.DEFAULT.fontWeight'),
       		'font-size': theme('custom.components.btn.DEFAULT.fontSize'),
 			'line-height': '1',
-			'background-color': 'var(--tw-light-active)',
+			'background-color': 'transparent',
 			'border-radius': theme('custom.components.common.borderRadius.btn'), 
 			'height': theme('custom.components.btn.DEFAULT.height'),
 			'padding-left': theme('custom.components.input.DEFAULT.px'),
 			'padding-right': theme('custom.components.input.DEFAULT.px'), 
 			'border': '1px solid var(--tw-gray-300)',
-			'color': 'var(--tw-gray-700)',
+			'color': 'var(--tw-gray-900)',
 			'&::placeholder, input::placeholder': {
 				'color': 'var(--tw-gray-500)',
 			},
 			'&:hover': {
-				'border-color': 'var(--tw-gray-400)',
+				'border-color': 'var(--tw-gray-300)',
 			},
 			'&:focus, &:has(input:focus)': {
-				'border-color': 'var(--tw-primary)',
-				'box-shadow': 'var(--tw-input-focus-box-shadow)',
-				'color': 'var(--tw-gray-700)',
+				'border-color': 'var(--tw-gray-300)',
+				'box-shadow': '0 0 0 2px var(--tw-gray-100)',
+				'color': 'var(--tw-gray-900)',
 				'&::placeholder, input::placeholder': {
 					'color': 'var(--tw-gray-600)'
 				},
 			},
 			'&:active, &:has(input:active)': {
-				'color': 'var(--tw-gray-700)',
+				'color': 'var(--tw-gray-900)',
 				'&::placeholder, input::placeholder': {
 					'color': 'var(--tw-gray-600)'
 				},
@@ -43,7 +43,7 @@ export default plugin(({addComponents, theme}) => {
 			},
 			'&:disabled, &:has(input:disabled)': {
 				'background-color': 'var(--tw-gray-100)',
-				'color': 'var(--tw-gray-400)',
+				'color': 'var(--tw-gray-800)',
 				'&::placeholder, input::placeholder': {
 					'color': 'var(--tw-gray-300)'
 				}

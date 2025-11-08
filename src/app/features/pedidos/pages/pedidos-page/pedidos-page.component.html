@@ -1,1 +1,53 @@
-<p>pedidos-page works!</p>
+<div class="card h-full mt-10">
+    <div class="card-header flex flex-wrap items-center lg:items-end justify-between gap-2">
+        <h3 class="card-title text-danger">
+            Pedidos
+        </h3>
+    </div>
+    <div class="card-body flex flex-col justify-end items-stretch grow px-3 py-3">
+
+        <div class="flex flex-col items-start w-full gap-2 mb-3 ml-2">
+            <span class="text-md text-gray-900 font-semibold">
+                {{ pedidos.length }} pedidos
+            </span>
+        </div>
+
+        <div class="flex flex-col gap-5 scrollable-y">
+            <div class="card shadow-none" *ngFor="let pedido of pedidos; let i = index">
+                <div class="card-body p-4">
+                    <div class="flex items-center flex-wrap justify-between gap-5">
+                        <div class="flex items-center gap-3.5 w-full">
+                            <div class="flex flex-col gap-2 w-full">
+                                <div class="flex items-center justify-between w-full">
+                                    <a
+                                        class="text-md font-semibold text-gray-900 lg:max-w-fit md:max-w-[200px] max-w-[150px]">
+                                        {{ obterItensFormatados(pedido) }}
+                                    </a>
+                                    <span class="badge badge-sm badge-pill min-w-[70px]">
+                                        {{ pedido.delivery ? 'Entrega' : 'Buscar/Comer Aqui' }}
+                                    </span>
+                                </div>
+                                <div class="flex items-center justify-between w-full">
+                                    <div class="text-sm text-gray-700">
+                                        Cliente: {{ pedido.cliente.nome }}
+                                    </div>
+                                    <span class="text-sm font-semibold text-gray-900">
+                                        {{ calcularValorTotalPedido(pedido) | currency:'BRL' }}
+                                    </span>
+                                </div>
+                                <div class="flex items-center justify-between w-full">
+                                    <div class="text-sm text-gray-700">
+                                        Endereço: {{ endereco(pedido.cliente.endereco) }}
+                                    </div>
+                                    <span class="text-sm font-normal text-gray-800">
+                                        {{ obterNomePagamento(pedido.metodo_pagamento) }}
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

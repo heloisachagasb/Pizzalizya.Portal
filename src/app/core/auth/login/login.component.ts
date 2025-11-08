@@ -40,24 +40,24 @@ export class LoginComponent implements OnInit {
 
   submit() {
 
-    this.carregando = true;
-    this.authLoginService.login(this.email, this.senha).subscribe(
-        response => {
+  //   this.carregando = true;
+  //   this.authLoginService.login(this.email, this.senha).subscribe(
+  //       response => {
           
-          let idUsuarioMPM = "";
+  //         let idUsuarioMPM = "";
 
-          if(response.value.id_usuario_mpm)
-            idUsuarioMPM = response.value.id_usuario_mpm.toString();
+  //         if(response.value.id_usuario_mpm)
+  //           idUsuarioMPM = response.value.id_usuario_mpm.toString();
 
-          this.authLoginService.LocalStorage.salvarDadosTokenUsuario(this.authLoginService.getAccessToken());
-          this.authLoginService.LocalStorage.salvarDadosLocaisUsuario(response.value.id_usuario, response.value.nome_usuario,
-            response.value?.id_cliente, this.email, idUsuarioMPM);
+  //         // this.authLoginService.LocalStorage.salvarDadosTokenUsuario(this.authLoginService.getAccessToken());
+  //         this.authLoginService.LocalStorage.salvarDadosLocaisUsuario(response.value.id_usuario, response.value.nome_usuario,
+  //           response.value?.id_cliente, this.email, idUsuarioMPM);
           
-        },
-        erro => {
-          this.carregando = false;
-          this.toastr.warning('Login/senha inválido!', 'Atenção!');
-        })
+  //       },
+  //       erro => {
+  //         this.carregando = false;
+  //         this.toastr.warning('Login/senha inválido!', 'Atenção!');
+  //       })
   }
 
 }

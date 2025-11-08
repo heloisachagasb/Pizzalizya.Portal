@@ -7,8 +7,8 @@ export default plugin(({addComponents, theme}) => {
     '.card': {
       'display': 'flex',
       'flex-direction': 'column',
-      'box-shadow': 'var(--tw-card-box-shadow)', 
-      'background-color': 'var(--tw-card-background-color)', 
+      'box-shadow': '0 2px 4px -3px rgba(0,0,0,0.2)', 
+      'background-color': 'bg-[#fefefe] dark:bg-[#09090B]', 
       'border-radius': theme('custom.components.common.borderRadius.card'),      
       'border': 'var(--tw-card-border)', 
     },
@@ -28,6 +28,8 @@ export default plugin(({addComponents, theme}) => {
       'padding-right': theme('custom.components.card.px'),
       'padding-top': theme('custom.components.card.py.header'),
       'padding-bottom': theme('custom.components.card.py.header'),
+      'background-color': 'bg-[#fefefe] dark:bg-[#09090B]', 
+      'border-radius': '10px 10px 0 0',      
     },
     '.card-body': {
       'flex-grow': '1',

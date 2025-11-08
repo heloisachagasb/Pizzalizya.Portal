@@ -147,18 +147,33 @@ th {
   color: var(--tw-gray-600) !important;
 }
 
-.switch input[type="checkbox"]:checked,
-.switch input[type="checkbox"][aria-checked="true"] {
-  background-color: #17c653;
-}
-
-.switch input[type="checkbox"] {
-  background-color: #f8285a;
+.switch input[type=checkbox]:checked,
+.switch input[type=checkbox][aria-checked="true"] {
+  background-color: var(--tw-danger) !important;
 }
 
 .imagem-logo-banco {
   width: 15px;
   border-radius: 25%;
+}
+
+.checkbox[type=checkbox] {
+  height: 1rem;
+  width: 1rem;
+}
+
+.radio[type=radio]:checked {
+  background-color: var(--tw-danger);
+  border: 1px solid var(--tw-danger);
+}
+
+.checkbox[type=checkbox]:focus {
+  border-color: var(--tw-danger) !important;
+}
+
+.checkbox[type=checkbox]:checked {
+  background-color: var(--tw-danger) !important;
+  border: 1px solid var(--tw-danger) !important;
 }
 
 .page-bg {
@@ -194,6 +209,11 @@ $my-theme: mat.define-light-theme(
       mat.define-typography-config(
         (
           font-family: "Inter, system-ui, sans-serif",
+          font-weight: 400,
+          font-size: 13px,
+          line-height: 14px,
+          letter-spacing: 0,
+          font-style: normal,
         )
       ),
     density: (
