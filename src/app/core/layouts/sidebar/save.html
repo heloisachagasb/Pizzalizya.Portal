@@ -1,0 +1,82 @@
+<div class="menu-item pb-2" data-menu-item-toggle="accordion" data-menu-item-trigger="click">
+    <div class="menu-link flex items-center grow cursor-pointer border border-transparent gap-[10px] pl-[10px] pr-[10px] py-[6px]"
+        tabindex="0">
+        <span class="menu-icon items-start w-[20px]">
+            <i class="ki-filled ki-delivery text-lg color-icone-fixo">
+            </i>
+        </span>
+        <span
+            class="menu-title text-sm font-semibold color-text-fixo menu-item-active:text-primary menu-link-hover:!text-primary">
+            Logística
+        </span>
+        <span class="menu-arrow color-icone-fixo w-[20px] shrink-0 justify-end ml-1 mr-[-10px]">
+            <i class="ki-filled ki-plus text-2xs menu-item-show:hidden">
+            </i>
+            <i class="ki-filled ki-minus text-2xs hidden menu-item-show:inline-flex">
+            </i>
+        </span>
+    </div>
+    <div
+        class="menu-accordion gap-0.5 pl-[10px] relative before:absolute before:left-[20px] before:top-0 before:bottom-0 before:border-l before:border-gray-800 dark:before:border-gray-200">
+        <div class="menu-item pb-2" data-menu-item-toggle="accordion" data-menu-item-trigger="click"
+            (click)="selecionarPagina('Logística', 'Recebimento')">
+            <div class="menu-item">
+                <a class="menu-link gap-[14px] pl-[10px] pr-[10px] py-[8px] border border-transparent items-center grow 
+                    menu-item-active:border-gray-100 menu-item-active:rounded-lg hover:bg-coal-100 hover:rounded-lg"
+                    routerLink="/logistica/recebimento" tabindex="0"
+                    [ngClass]="{'bg-coal-100 text-primary rounded-lg': estaAtiva(['/logistica/recebimento']), 'hover:bg-coal-100 hover:rounded-lg': !estaAtiva(['/logistica/recebimento'])}">
+                    <span class="menu-bullet flex w-[6px] relative">
+                        <span
+                            class="before:absolute before:top-1/2 before:left-0 before:w-[6px] before:h-[6px] before:rounded-full before:-translate-x-1/2 before:-translate-y-1/2"
+                            [ngClass]="{'before:bg-primary': estaAtiva(['/logistica/recebimento']), 'hover:!before:bg-primary': true}">
+                        </span>
+                    </span>
+                    <span
+                        class="menu-title text-2sm font-semibold color-text-fixo menu-item-active:text-primary menu-item-active:font-semibold menu-link-hover:!text-primary"
+                        [ngClass]="{'!text-primary': estaAtiva(['/logistica/recebimento']), 'hover:!text-primary': true}">
+                        Recebimento
+                    </span>
+                </a>
+            </div>
+        </div>
+        <div class="menu-item" data-menu-item-toggle="accordion" data-menu-item-trigger="click"
+            (click)="selecionarPagina('Logística', 'Expedição')">
+            <div class="menu-item pb-2">
+                <a class="menu-link gap-[14px] pl-[10px] pr-[10px] py-[8px] border border-transparent items-center grow 
+                    menu-item-active:border-gray-100 menu-item-active:rounded-lg hover:bg-coal-100 hover:rounded-lg"
+                    routerLink="/logistica/expedicao" tabindex="0"
+                    [ngClass]="{'bg-coal-100 text-primary rounded-lg': estaAtiva(['/logistica/expedicao']), 'hover:bg-coal-100 hover:rounded-lg': !estaAtiva(['/logistica/expedicao'])}">
+                    <span class="menu-bullet flex w-[6px] relative">
+                        <span
+                            class="before:absolute before:top-1/2 before:left-0 before:w-[6px] before:h-[6px] before:rounded-full before:-translate-x-1/2 before:-translate-y-1/2"
+                            [ngClass]="{'before:bg-primary': estaAtiva(['/logistica/expedicao']), 'hover:!before:bg-primary': true}">
+                        </span>
+                    </span>
+                    <span
+                        class="menu-title text-2sm font-semibold color-text-fixo menu-item-active:text-primary menu-item-active:font-semibold menu-link-hover:!text-primary"
+                        [ngClass]="{'!text-primary': estaAtiva(['/logistica/expedicao']), 'hover:!text-primary': true}">
+                        Expedição
+                    </span>
+                </a>
+            </div>
+        </div>
+        <div class="menu-item pb-2" (click)="selecionarPagina('Logística', 'Estoque Terceiro')">
+            <a class="menu-link gap-[14px] pl-[10px] pr-[10px] py-[8px] border border-transparent items-center grow 
+                menu-item-active:border-gray-100 menu-item-active:rounded-lg hover:bg-coal-100 hover:rounded-lg"
+                routerLink="/logistica/estoque-terceiro" tabindex="0"
+                [ngClass]="{'bg-coal-100 text-primary rounded-lg': estaAtiva(['/logistica/estoque-terceiro']), 'hover:bg-coal-100 hover:rounded-lg': !estaAtiva(['/logistica/estoque-terceiro'])}">
+                <span class="menu-bullet flex w-[6px] relative">
+                    <span
+                        class="before:absolute before:top-1/2 before:left-0 before:w-[6px] before:h-[6px] before:rounded-full before:-translate-x-1/2 before:-translate-y-1/2"
+                        [ngClass]="{'before:bg-primary': estaAtiva(['/logistica/estoque-terceiro']), 'hover:!before:bg-primary': true}">
+                    </span>
+                </span>
+                <span
+                    class="menu-title text-2sm font-semibold color-text-fixo menu-item-active:text-primary menu-item-active:font-semibold menu-link-hover:!text-primary"
+                    [ngClass]="{'!text-primary': estaAtiva(['/logistica/estoque-terceiro']), 'hover:!text-primary': true}">
+                    Estoque Terceiro
+                </span>
+            </a>
+        </div>
+    </div>
+</div>

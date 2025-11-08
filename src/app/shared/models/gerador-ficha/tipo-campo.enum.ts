@@ -1,0 +1,15 @@
+export const TipoCampo = {
+    INPUT: 1,
+    TEXTAREA: 2,
+    CHECKBOX: 3,
+    RADIOBUTTON: 4,
+    SELECTPICKER: 5,
+    DATETIMEPICKER: 6,
+    DATEPICKER: 7,
+    TIMEPICKER: 8,
+    FOTOS: 9,
+    TABELA: 10,
+    TITULO: 11,
+    LABEL: 12,
+    GRUPOFICHA: 13,
+  } as const;

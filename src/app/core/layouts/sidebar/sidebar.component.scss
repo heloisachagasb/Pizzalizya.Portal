@@ -1,0 +1,34 @@
+.menu-item.active>.menu-link .menu-item-active\:before\:bg-primary:before {
+    content: var(--tw-content);
+    background-color: var(--tw-primary)
+}
+
+.menu-item:hover>.menu-link .menu-item-hover\:before\:bg-primary:before {
+    content: var(--tw-content);
+    background-color: var(--tw-primary)
+}
+
+.default-logo {
+    padding-top: 20px;
+    height: 55px;
+}
+
+.small-logo {
+    height: 25px;
+}
+
+.bg-color{
+    background-color: #0d0e12;
+}
+
+.color-icone-fixo{
+    color: #4b5563;
+}
+
+.color-text-fixo{
+    color: #9ca3af; 
+}
+
+.border-botao-fixo {
+    border: #4b5563 1px solid;
+}

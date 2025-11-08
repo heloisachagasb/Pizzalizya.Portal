@@ -1,0 +1,7 @@
+export enum StatusServicoRequisicao {
+    AGUARDANDO_SUPRIMENTOS = 1,
+    REALIZANDO_COTACAO = 2,
+    COMPRA_SOLICITADA = 3,
+    AGUARDANDO_RETIRADA = 4,
+    RETIRADO = 5,
+}

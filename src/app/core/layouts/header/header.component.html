@@ -1,0 +1,287 @@
+<ng-container>
+	<div class="container-fixed flex justify-between items-stretch lg:gap-4" id="header_container">
+		<div class="flex gap-1 lg:hidden items-center -ml-1">
+			<a class="dark:hidden" href="html/demo1.html">
+				<img class="max-h-[20px] w-full" src="assets/media/logos/lizy_preto_pequeno.png" />
+			</a>
+			<a class="hidden dark:block" href="html/demo1.html">
+				<img class="max-h-[20px] w-full" src="assets/media/logos/lizy_branco_pequeno.png" />
+			</a>
+			<div class="flex items-center">
+				<button class="btn btn-icon btn-light btn-clear btn-sm" data-drawer-toggle="#sidebar">
+					<i class="ki-filled ki-menu">
+					</i>
+				</button>
+			</div>
+		</div>
+
+		<ng-container *ngIf="title$ | async as title">
+			<h1 class="flex items-center font-semibold">
+				<span [innerHTML]="breadcrumbPath"></span>
+			</h1>
+		</ng-container>
+
+		<div class="flex items-center lg:gap-3.5">
+			<div>
+			
+			</div>
+			<div class="dropdown" data-dropdown="true" data-dropdown-offset="70px, 10px"
+				data-dropdown-placement="bottom-end" data-dropdown-trigger="click|lg:click">
+				<button
+					class="dropdown-toggle btn btn-icon btn-icon-lg relative cursor-pointer size-9 rounded-full hover:bg-primary-light hover:text-primary dropdown-open:bg-primary-light dropdown-open:text-primary text-gray-500">
+					<i class="ki-filled ki-notification-on">
+					</i>
+					<span
+						class="badge badge-dot badge-success size-[5px] absolute top-0.5 right-0.5 transform translate-y-1/2">
+					</span>
+				</button>
+				<div class="dropdown-content light:border-gray-300 w-full max-w-[460px]">
+					<div class="flex items-center justify-between gap-2.5 text-sm text-gray-900 font-semibold px-5 py-2.5"
+						id="notifications_header">
+						Notificações
+						<button class="btn btn-sm btn-icon btn-light btn-clear shrink-0" data-dropdown-dismiss="true">
+							<i class="ki-filled ki-cross">
+							</i>
+						</button>
+					</div>
+					<div class="border-b border-b-gray-200">
+					</div>
+					<div class="grow" id="notifications_tab_all">
+						<div class="flex flex-col">
+							<div class="scrollable-y-auto" data-scrollable="true" data-scrollable-dependencies="#header"
+								data-scrollable-max-height="auto" data-scrollable-offset="200px">
+								<div class="flex flex-col gap-5 pt-3 pb-4 divider-y divider-gray-200">
+									<div class="flex grow gap-2.5 px-5">
+										<div class="flex flex-col gap-3.5">
+											<div class="text-2sm font-semibold">
+												<span class="text-sm text-gray-900 font-semibold px-10">
+													Atenção
+												</span>
+											</div>
+											<div class="flex items-center justify-between gap-5">
+												<span>
+													<i class="ki-solid ki-information-1 text-1.5xl link"></i>
+												</span>
+												<div class="flex flex-col">
+													<a class="text-2sm text-gray-700 hover:text-primary-active"
+														href="#">
+														A Cotação 13 foi alterada pelo Fornecedor MINAS DESCARTAVEIS
+													</a>
+												</div>
+											</div>
+											<div class="px-10">
+												<span
+													class="badge badge-sm badge-primary badge-outline width font-size-10">
+													10/09/2024 09:32
+												</span>
+											</div>
+										</div>
+									</div>
+									<div class="border-b border-b-gray-200">
+									</div>
+									<div class="flex grow gap-2.5 px-5">
+										<div class="flex flex-col gap-3.5">
+											<div class="text-2sm font-semibold">
+												<span class="text-sm text-gray-900 font-semibold px-10">
+													Atenção
+												</span>
+											</div>
+											<div class="flex items-center justify-between gap-5">
+												<span>
+													<i class="ki-solid ki-information-1 text-1.5xl link"></i>
+												</span>
+												<div class="flex flex-col">
+													<a class="text-2sm text-gray-700 hover:text-primary-active"
+														href="#">
+														A Cotação 13 foi alterada pelo Fornecedor AUTOMATIZE
+													</a>
+												</div>
+											</div>
+											<div class="px-10">
+												<span
+													class="badge badge-sm badge-primary badge-outline width font-size-10">
+													09/09/2024 21:04
+												</span>
+											</div>
+										</div>
+									</div>
+									<div class="border-b border-b-gray-200">
+									</div>
+									<div class="flex grow gap-2.5 px-5">
+										<div class="flex flex-col gap-3.5">
+											<div class="text-2sm font-semibold">
+												<span class="text-sm text-gray-900 font-semibold px-10">
+													Atenção
+												</span>
+											</div>
+											<div class="flex items-center justify-between gap-5">
+												<span>
+													<i class="ki-solid ki-information-1 text-1.5xl link"></i>
+												</span>
+												<div class="flex flex-col">
+													<a class="text-2sm text-gray-700 hover:text-primary-active"
+														href="#">
+														A Cotação 13 foi alterada pelo Fornecedor PRIMO ROLAMENTOS
+													</a>
+												</div>
+											</div>
+											<div class="px-10">
+												<span
+													class="badge badge-sm badge-primary badge-outline width font-size-10">
+													09/09/2024 21:03
+												</span>
+											</div>
+										</div>
+									</div>
+									<div class="border-b border-b-gray-200">
+									</div>
+									<div class="flex grow gap-2.5 px-5">
+										<div class="flex flex-col gap-3.5">
+											<div class="text-2sm font-semibold">
+												<span class="text-sm text-gray-900 font-semibold px-10">
+													Atenção
+												</span>
+											</div>
+											<div class="flex items-center justify-between gap-5">
+												<span>
+													<i class="ki-solid ki-information-1 text-1.5xl link"></i>
+												</span>
+												<div class="flex flex-col">
+													<a class="text-2sm text-gray-700 hover:text-primary-active"
+														href="#">
+														Atenção o orçamento 53090 foi aprovado, clique aqui para
+														confirmar os valores e lançamentos financeiros </a>
+												</div>
+											</div>
+											<div class="px-10">
+												<span
+													class="badge badge-sm badge-primary badge-outline width font-size-10">
+													05/09/2024 11:41
+												</span>
+											</div>
+										</div>
+									</div>
+									<div class="border-b border-b-gray-200">
+									</div>
+									<div class="flex grow gap-2.5 px-5">
+										<div class="flex flex-col gap-3.5">
+											<div class="text-2sm font-semibold">
+												<span class="text-sm text-gray-900 font-semibold px-10">
+													Atenção
+												</span>
+											</div>
+											<div class="flex items-center justify-between gap-5">
+												<span>
+													<i class="ki-solid ki-information-1 text-1.5xl link"></i>
+												</span>
+												<div class="flex flex-col">
+													<a class="text-2sm text-gray-700 hover:text-primary-active"
+														href="#">
+														Atenção o orçamento 4 foi aprovado, clique aqui para confirmar
+														os valores e lançamentos financeiros
+													</a>
+												</div>
+											</div>
+											<div class="px-10">
+												<span
+													class="badge badge-sm badge-primary badge-outline width font-size-10">
+													03/09/2024 08:22
+												</span>
+											</div>
+										</div>
+									</div>
+									<div class="border-b border-b-gray-200">
+									</div>
+									<div class="flex grow gap-2.5 px-5">
+										<div class="flex flex-col gap-3.5">
+											<div class="text-2sm font-semibold">
+												<span class="text-sm text-gray-900 font-semibold px-10">
+													Atenção
+												</span>
+											</div>
+											<div class="flex items-center justify-between gap-5">
+												<span>
+													<i class="ki-solid ki-information-1 text-1.5xl link"></i>
+												</span>
+												<div class="flex flex-col">
+													<a class="text-2sm text-gray-700 hover:text-primary-active"
+														href="#">
+														A Cotação 12 foi alterada pelo Fornecedor MINAS DESCARTAVEIS
+													</a>
+												</div>
+											</div>
+											<div class="px-10">
+												<span
+													class="badge badge-sm badge-primary badge-outline width font-size-10">
+													03/09/2024 07:32
+												</span>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="border-b border-b-gray-200">
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="menu" data-menu="true">
+				<div class="menu-item" data-menu-item-offset="20px, 10px" data-menu-item-placement="bottom-end"
+					data-menu-item-toggle="dropdown" data-menu-item-trigger="click|lg:click">
+					<div class="menu-toggle btn btn-icon rounded-full">
+						<img alt="" class="size-9 rounded-full border-2 border-success shrink-0"
+							src="assets/media/avatars/300-2.png" />
+					</div>
+					<div class="menu-dropdown menu-default light:border-gray-300 w-full max-w-[250px]">
+						<div class="flex items-center justify-between px-5 py-1.5 gap-1.5">
+							<div class="flex items-center gap-2">
+								<img alt="" class="size-9 rounded-full border-2 border-success"
+									src="assets/media/avatars/300-2.png" />
+								<div class="flex flex-col gap-1.5">
+									<span class="text-sm text-gray-800 font-semibold leading-none">
+										Cody Fisher
+									</span>
+									<a class="text-xs text-gray-600 hover:text-primary font-semibold leading-none"
+										href="html/demo1/account/home/get-started.html">
+										c.fisher&#64;gmail.com
+									</a>
+								</div>
+							</div>
+							<span class="badge badge-sm badge-warning badge-outline">
+								Gold
+							</span>
+						</div>
+						<div class="text-center">
+							<span class="text-xs text-gray-600 font-semibold leading-none">
+								{{ dataHoraAtual | date: 'dd \'de\' MMMM \'de\' YYYY':'':'pt-BR' }}
+							</span>
+						</div>
+						<div class="flex flex-col">
+							<div class="menu-item mb-0.5">
+								<div class="menu-link">
+									<span class="menu-icon">
+										<i class="ki-filled ki-moon">
+										</i>
+									</span>
+									<span class="menu-title">
+										Modo Escuro
+									</span>
+									<label class="switch switch-sm">
+										<input data-theme-state="dark" data-theme-toggle="true" name="check"
+											type="checkbox" value="1" />
+									</label>
+								</div>
+							</div>
+							<div class="menu-item px-4 py-1.5">
+								<a class="btn btn-sm btn-light justify-center" (click)="logout()">
+									Sair
+								</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</ng-container>

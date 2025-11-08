@@ -1,0 +1,8 @@
+export enum StatusProdutoRequisicao {
+    AGUARDANDO_SUPRIMENTOS = 1,
+    SOLICITADO_COTAÇÃO = 2,
+    AGUARDANDO_FORNECEDOR = 3,
+    SOLICITADO_COMPRA = 4,
+    LIBERADO_PARA_RETIRADA = 5,
+    RETIRADO = 6,
+}
